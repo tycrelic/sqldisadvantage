@@ -1,0 +1,11 @@
+/lib/h2-1.3.176.jar
+/lib/iijdbc.jar
+/lib/jconn3.jar
+/lib/ojdbc6.jar
+/lib/CopyLibs
+#/lib/CopyLibs/*
+/lib/nblibraries.properties
+/nbproject
+#/nbproject/*
+/build.xml
+/manifest.mf
