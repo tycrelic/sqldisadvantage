@@ -15,7 +15,7 @@ public class SpoolCommand extends SqlClientCommand {
 		if (substitutedFileName != null || mode != null) {
 			try {
 				env.closeOutputStream();
-				env.setOutputStreamCloseable(true);
+				env.setOutputStreamCloseable(false);
 			} catch (IOException ex) {
 				Logger.getLogger(SpoolCommand.class.getName()).log(Level.SEVERE, null, ex);
 			}
@@ -39,7 +39,7 @@ public class SpoolCommand extends SqlClientCommand {
 
 				if ("OFF".equalsIgnoreCase(mode)) {
 					env.closeOutputStream();
-					env.setOutputStreamCloseable(true);
+					env.setOutputStreamCloseable(false);
 				} else if ("OUT".equalsIgnoreCase(mode)) {
 					// to do 
 				}

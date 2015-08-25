@@ -56,7 +56,7 @@ public class ExcelExporter extends Exporter {
     return buf.toString();
   }
 
-  public void export(OutputStream out, ResultSet rs, boolean closesOutputStream) throws IOException, SQLException {
+  public void exportData(OutputStream out, ResultSet rs, boolean closesOutputStream) throws IOException, SQLException {
     Workbook wb;
     Sheet sheet;
     if (excel2007) {
