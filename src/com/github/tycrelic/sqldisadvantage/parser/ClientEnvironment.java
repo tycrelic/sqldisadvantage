@@ -275,7 +275,7 @@ public class ClientEnvironment {
     if (queryable) {
       ResultSet rs = s.executeQuery(sql);
 
-      Exporter.exportData(getSystemVariable("OUTPUTFORMAT"), outputStream, rs, outputStreamCloseable);
+      Exporter.export(getSystemVariable("OUTPUTFORMAT"), outputStream, rs, outputStreamCloseable);
     } else {
       s.executeUpdate(sql);
     }
