@@ -166,6 +166,7 @@ TOKEN: /* Commands. lexical state of SQL client commands is DEFAULT */
 | <DELETE:"DELETE">                   : IN_SQL
 | <DROP:"DROP">                       : IN_SQL
 | <INSERT:"INSERT">                   : IN_SQL
+| <LOAD:"LOAD">                       : IN_SQL //extension
 | <REPLACE:"REPLACE">                 : IN_SQL
 //| <SELECT:"SELECT">                   : IN_SQL
 | <TRUNCATE:"TRUNCATE">               : IN_SQL
@@ -465,6 +466,13 @@ void Statement():
 {
   (
     t1=<SELECT> (t2=<ANYTHING>)+
+    {
+      cmd.setQueryable(true);
+      cmd.setSql(extractOriginalText(t1, t2));
+      et = t2;
+    }
+  |
+    t1=<LOAD> (t2=<ANYTHING>)+
     {
       cmd.setQueryable(true);
       cmd.setSql(extractOriginalText(t1, t2));
