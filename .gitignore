@@ -3,13 +3,9 @@
 /lib/jconn3.jar
 /lib/ojdbc6.jar
 /lib/CopyLibs
+#/lib/CopyLibs/*
 /lib/nblibraries.properties
-/build
-/dist
 /nbproject
+#/nbproject/*
 /build.xml
 /manifest.mf
-/*.cmd
-/*.log
-/*.sql
-/ds_*

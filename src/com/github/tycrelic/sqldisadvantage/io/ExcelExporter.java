@@ -211,7 +211,6 @@ public class ExcelExporter extends Exporter {
 
     wb.write(out);
 
-    out.flush();
     if (closesOutputStream) {
       out.close();
     }
